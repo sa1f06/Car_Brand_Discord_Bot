@@ -14,8 +14,11 @@ def get_brand_info(brand_name):
     new_brand_name = brand_name.replace("_", " ").replace("-", " ")
 
     for row in table_row:
+        #find the "th" in html
         table_header = 'th'
+        #find "th" and "Founded" in html
         if table_header and "Founded" in table_header:
+            #find the data inside the html
             date_found = table_header.find('td').text
             print(f"{new_brand_name} was founded: {date_found}")
         if table_header and "Founders" in table_header:
