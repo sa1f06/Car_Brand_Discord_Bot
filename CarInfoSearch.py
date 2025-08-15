@@ -19,5 +19,8 @@ def get_brand_info(brand_name):
             date_found = table_header.find('td').text
             print(f"{new_brand_name} was founded: {date_found}")
         if table_header and "Founders" in table_header:
-            founder_name = table_header.find('td')
-            print(f"{new_brand_name.title()} was founded by {founder_name}")
+            founder_names = table_header.find('td').text
+            print(f"{new_brand_name.title()} was founded by {founder_names}")
+        if table_header and "Founder" in table_header:
+            founder_name = table_header.find('td').text
+            print(f"The founder of {new_brand_name} is: {founder_name}")
