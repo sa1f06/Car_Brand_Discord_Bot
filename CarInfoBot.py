@@ -19,16 +19,11 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 @bot.event
 async def on_ready():
     print(f"We are good to go, {bot.user.name}")
-#This will not allow the bot to reply to its own message, to avoid any potential infinite loops
-@bot.event
-async def on_message(message):
-    if  message.author == bot.user:
-        return
 
 @bot.command(name='brand_name')
 async def find(ctx, *,brand_name: str):
     CarInfoSearch.get_brand_info(brand_name)
-    await ctx.reply(CarInfoSearch.result)
+    await ctx.reply(CarInfoSearch.car_info)
 
 #This is what will allow the bot to run
 bot.run(token, log_handler=handler,log_level=logging.DEBUG)
