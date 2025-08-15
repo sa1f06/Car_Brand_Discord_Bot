@@ -26,7 +26,7 @@ async def on_message(message):
         return
 
 @bot.command(name='car_brand')
-async def find(ctx, brand_name: str):
+async def find(ctx, *,brand_name: str):
     CarInfoSearch.get_brand_info(brand_name)
     await ctx.reply(CarInfoSearch.result)
 
