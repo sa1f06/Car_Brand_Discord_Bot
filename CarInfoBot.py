@@ -18,7 +18,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 @bot.event
 async def on_ready():
-    print("We are good to go, {bot.user.name}")
+    print(f"We are good to go, {bot.user.name}")
 #This will not allow the bot to reply to its own message, to avoid any potential infinite loops
 @bot.event
 async def on_message(message):
