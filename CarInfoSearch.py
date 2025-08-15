@@ -35,7 +35,7 @@ def get_brand_info(brand_name):
             total_money = table_header.find("td").text
             car_info.append(f"The revenue for {new_brand_name} is: {total_money}")
 
-
+    #This ensure the bot responds to the user if no information is found
     if car_info:
         return "\n".join(car_info)
     else:
