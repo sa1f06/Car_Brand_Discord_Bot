@@ -21,19 +21,19 @@ def get_brand_info(brand_name):
         if table_header and "Founded" in table_header:
             #find the data inside the html
             date_found = row.find('td').text.split("(")[0].split("[")[0]
-            car_info.append(f"{new_brand_name.title()} was founded: {date_found}")
+            car_info.append(f"•{new_brand_name.title()} was founded: {date_found}")
         if table_header and "Founders" in table_header:
             founder_names = row.find('td').text.split("(")[0].split("[")[0]
-            car_info.append(f"{new_brand_name.title()} was founded by {founder_names}")
+            car_info.append(f"•{new_brand_name.title()} was founded by {founder_names}")
         if table_header and "Founder" in table_header:
             founder_name = row.find('td').text.split("(")[0].split("[")[0]
-            car_info.append(f"The founder of {new_brand_name} is: {founder_name}")
+            car_info.append(f"•The founder of {new_brand_name} is: {founder_name}")
         if table_header and "Headquarters" in table_header:
             location = row.find("td").text.split("(")[0].split("[")[0]
-            car_info.append(f"The headquarters of {new_brand_name} are located in: {location}")
+            car_info.append(f"•The headquarters of {new_brand_name} are located in: {location}")
         if table_header and "Revenue" in table_header:
             total_money = row.find("td").text.split("[")[0]
-            car_info.append(f"The revenue for {new_brand_name} is: {total_money}")
+            car_info.append(f"•The revenue for {new_brand_name} is: {total_money}")
 
     #This ensure the bot responds to the user if no information is found
     if car_info:
