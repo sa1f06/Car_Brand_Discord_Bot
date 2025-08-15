@@ -23,7 +23,7 @@ async def on_ready():
 @bot.command(name='brand_name')
 async def find(ctx, *,brand_name: str):
     result = CarInfoSearch.get_brand_info(brand_name)
-    await ctx.reply(CarInfoSearch.result)
+    await ctx.reply(result)
 
 #This is what will allow the bot to run
 bot.run(token, log_handler=handler,log_level=logging.DEBUG)
