@@ -15,7 +15,7 @@ def get_brand_info(brand_name):
 
     for row in table_row:
         #find the "th" in html
-        table_header = 'th'
+        table_header = row.find("th")
         #find "th" and "Founded" in html
         if table_header and "Founded" in table_header:
             #find the data inside the html
