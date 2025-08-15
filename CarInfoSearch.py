@@ -34,3 +34,9 @@ def get_brand_info(brand_name):
         if table_header and "Revenue" in table_header:
             total_money = table_header.find("td").text
             car_info.append(f"The revenue for {new_brand_name} is: {total_money}")
+
+
+    if car_info:
+        return "\n".join(car_info)
+    else:
+        return f"Sorry, I couldn't find any info for {new_brand_name.title()}"
