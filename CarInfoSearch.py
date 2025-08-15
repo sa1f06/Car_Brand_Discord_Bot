@@ -24,6 +24,9 @@ def get_brand_info(brand_name):
         if table_header and "Founder" in table_header:
             founder_name = table_header.find('td').text
             print(f"The founder of {new_brand_name} is: {founder_name}")
+        if table_header and "Headquarters" in table_header:
+            location = table_header.find("td").text
+            print("The headquarters of {new_brand_name} are located in: {location}")
         if table_header and "Revenue" in table_header:
             total_money = table_header.find("td").text
             print(f"The revenue for {new_brand_name} is: {total_money}")
