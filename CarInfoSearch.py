@@ -12,6 +12,7 @@ def get_brand_info(brand_name):
     table_row = soup.find_all('tr')
 
     new_brand_name = brand_name.replace("_", " ").replace("-", " ")
+    info = []
 
     for row in table_row:
         #find the "th" in html
