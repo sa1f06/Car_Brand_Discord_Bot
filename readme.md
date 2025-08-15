@@ -3,8 +3,16 @@
 A Discord bot made in python which retrieves key information about different car brands by web scraping Wikipedia.
 
 Features:
+
 - Retrieves car brand details, such as the date it was founded, founder or founders, where the headquarters are based, and the revenue.
-- Only displays data available, so if the user types something invalid, like pizza, the bot will return "Sorry, I can't find any information for Pizza".
+- Only displays data available, so if the user types something invalid, like pizza, the bot will return: "Sorry, I can't find any information for Pizza".
+
+How it works:
+
+1. The user will send a command in Discord, like !brand bmw
+2. The bot will use requests and BeautifulSoup to scrape the Wikipedia page for that brand.
+3. The infobox (in HTML) is parsed and will extract the information we want.
+4. The bot outputs that information to the user.
 
 Testing:
 
@@ -18,3 +26,5 @@ Whilst testing, I found that the bot would return the correct information to the
  ![Ferrari example](images/bot_ferrari.png)
  ![Audi example](images/bot_audi.png)
  ![Pizza example](images/bot_pizza.png)
+
+ 
