@@ -2,7 +2,7 @@
 
 *.txt
 
-discord.log
+*.log
 
 __pycache__/
 
