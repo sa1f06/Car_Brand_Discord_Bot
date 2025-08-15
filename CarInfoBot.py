@@ -20,7 +20,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f"We are good to go, {bot.user.name}")
 
-@bot.command(name='brand_name')
+@bot.command(name='brand')
 async def find(ctx, *,brand_name: str):
     result = CarInfoSearch.get_brand_info(brand_name)
     await ctx.reply(result)
