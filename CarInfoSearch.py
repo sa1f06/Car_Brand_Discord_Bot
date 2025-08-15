@@ -40,4 +40,8 @@ def get_brand_info(brand_name):
         return "\n".join(car_info)
     else:
         return f"Sorry, I couldn't find any info for {new_brand_name.title()}"
-
+    
+if __name__ == "__main__":
+    brand = input("What car do you want to know about? ")
+    result = get_brand_info(brand)
+    print(result)
