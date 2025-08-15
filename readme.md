@@ -1,6 +1,10 @@
 # Car Brand Discord Bot
 
-A Discord bot which retrieves information about different car brands through web scraping from Wikipedia.
+A Discord bot made in python which retrieves key information about different car brands by web scraping Wikipedia.
+
+Features:
+- Retrieves car brand details, such as the date it was founded, founder or founders, where the headquarters are based, and the revenue.
+- Only displays data available, so if the user types something invalid, like pizza, the bot will return "Sorry, I can't find any information for Pizza".
 
 Testing:
 
