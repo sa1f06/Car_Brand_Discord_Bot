@@ -12,4 +12,5 @@ Whilst testing, I found that the bot would return the correct information to the
 
  ![BMW example](images/bot_bmw.png)
  ![Ferrari example](images/bot_ferrari.png)
+ ![Audi example](images/bot_audi.png)
  ![Pizza example](images/bot_pizza.png)
