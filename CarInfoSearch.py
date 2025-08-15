@@ -40,3 +40,4 @@ def get_brand_info(brand_name):
         return "\n".join(car_info)
     else:
         return f"Sorry, I couldn't find any info for {new_brand_name.title()}"
+

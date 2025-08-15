@@ -25,9 +25,10 @@ async def on_message(message):
     if  message.author == bot.user:
         return
 
-@bot.command(name='car_brand')
-async def find(ctx, name):
-    CarInfoSearch.search(name)
+@bot.command(brand_name='car_brand')
+async def find(ctx, brand_name):
+    CarInfoSearch.search(brand_name)
     await ctx.reply(CarInfoSearch.result)
+
 #This is what will allow the bot to run
 bot.run(token, log_handler=handler,log_level=logging.DEBUG)
